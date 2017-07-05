@@ -1,0 +1,23 @@
+{
+  "name": "socketio-cluster",
+  "version": "0.0.0",
+  "description": "Socket cluster example",
+  "main": "./server",
+  "scripts": {
+    "connect": "HOST=localhost:9999 nodemon sockettest.js",
+    "db": "concurrently 'redis-commander' 'xdg-open http://localhost:8081'",
+    "serve": "nodemon server.js"
+  },
+  "author": "Simon Emms",
+  "dependencies": {
+    "express": "^4.15.3",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3",
+    "socket.io-redis": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "eslint": "^4.1.1",
+    "nodemon": "^1.11.0"
+  }
+}
